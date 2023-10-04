@@ -1,3 +1,5 @@
+import style from "./banner.module.css";
+
 const Banner = (props) => {
   const { title, subTitle, imgUrl } = props;
   const handleOnPlay = () => {
@@ -9,13 +11,9 @@ const Banner = (props) => {
       <h3>{subTitle}</h3>
       <button onClick={handleOnPlay}>Play</button>
       <div
+        className={style.img}
         style={{
           backgroundImage: `url(${imgUrl})`,
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          backgroundSize: "cover",
-          backgroundPosition: "50% 50%",
         }}
       ></div>
     </div>
