@@ -24,6 +24,12 @@ const NavBar = (props) => {
   const handleShowDropdown = (e) => {
     e.preventDefault();
     setShowDropdown(!showDropdown);
+    const img = e.target;
+    if (!showDropdown === true) {
+      img.style.transform = "rotate(180deg)";
+    } else {
+      img.style.transform = "rotate(360deg)";
+    }
   };
 
   return (
